@@ -1,0 +1,17 @@
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">NOME</th>
+    <th class="tabela__cabecalho__conteudo">CPF</th>
+    <th class="tabela__cabecalho__conteudo">TELEFONE</th>
+    <th class="tabela__cabecalho__conteudo">E-MAIL</th>
+  </thead>
+  <tbody>
+    <tr class="tabela__linha" *ngFor="let indicacao of indicacoesData">
+      <td class="tabela__conteudo">{{indicacao?.nome}}</td>
+      <td class="tabela__conteudo">{{indicacao?.cpf}}</td>
+      <td class="tabela__conteudo">{{indicacao?.telefone}}</td>
+      <td class="tabela__conteudo">{{indicacao?.email}}</td>
+    </tr>
+  </tbody>
+
+</table>
