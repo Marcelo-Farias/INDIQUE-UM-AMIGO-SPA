@@ -6,6 +6,7 @@ import { IncluirIndicacaoComponent } from './incluir-indicacao/incluir-indicacao
 import { FormsModule } from '@angular/forms';
 import { ListarIndicacoesComponent } from './listar-indicacoes/listar-indicacoes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

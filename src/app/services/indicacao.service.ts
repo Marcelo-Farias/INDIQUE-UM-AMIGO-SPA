@@ -1,3 +1,4 @@
+import { NovaIndicacao } from './../models/send/novaindicacao.model';
 import { Indicacoes } from './../models/indicacoes.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -22,12 +23,14 @@ export class IndicacaoService {
     this.listaIndicacoes.push(indicacao);
   }
 
-
-  // Obtem todas as indicações e informações da paginação.
-  getIndicacoes (): Observable<Indicacoes[]> {
+  // Recebe todas as indicações e informações da paginação.
+  getIndicacoes(): Observable<Indicacoes[]> {
     return this.httpClient.get<Indicacoes[]>(this.url)
   }
 
-
+  // Envia uma nova indicação.
+  sendIndicacao(novaIndicacao: NovaIndicacao): Observable<NovaIndicacao>{
+    return this.httpClient.post<NovaIndicacao>( this.url, novaIndicacao);
+  }
 
 }

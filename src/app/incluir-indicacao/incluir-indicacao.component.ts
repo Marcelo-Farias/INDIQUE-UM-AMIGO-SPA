@@ -1,3 +1,4 @@
+import { NovaIndicacao } from './../models/send/novaindicacao.model';
 import { IndicacaoService } from './../services/indicacao.service';
 import { Component, EventEmitter, Output } from "@angular/core";
 
@@ -20,9 +21,14 @@ export class IncluirIndicacaoComponent{
   incluir() {
     console.log('Solicitada a inclusão da indicação.');
 
-    const dadosInseridos = {nome: this.nome, cpf: this.cpf, telefone: this.telefone, email: this.email};
-    this.service.adicionar(dadosInseridos);
-    this.limparCampos();
+    const dadosInseridos: NovaIndicacao = {nome: this.nome, cpf: this.cpf, telefone: this.telefone, email: this.email};
+    this.service.sendIndicacao(dadosInseridos).subscribe(
+      (resultado) => {
+        console.log(resultado);
+        this.limparCampos();
+      },
+      (error) => console.error(error)
+    );
   }
 
   limparCampos(){
