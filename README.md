@@ -1,5 +1,5 @@
 # INDIQUE-UM-AMIGO-Marcelo-Farias
- Projeto solicitado no processo de seleção para programador back-end da UNISUAM em 2021.
+SPA do projeto solicitado no processo de seleção para programador back-end da UNISUAM em 2021.
 
 ## Detalhes do projeto:
 O SGBD utilizado foi o PostgreSQL. A implementação da API RESTful foi feita com o Lumen(Laravel). E o front-end foi feito em um projeto separado usando o framework Angular.
