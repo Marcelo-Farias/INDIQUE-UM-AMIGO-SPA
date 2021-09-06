@@ -1,9 +1,20 @@
 :root {
   --primary: #ef7d00;
   --secondary: #0a8196;
+  --terciary: #005a87;
   --padding: 15px;
   --cinza : #405040;
   --cinza-claro: #dedede;
+}
+
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: inherit;
 }
 
 * {

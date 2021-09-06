@@ -36,8 +36,12 @@
   }
 }
 
+.botao-wrapper {
+  display: table-cell;
+}
+
 .botao {
-  background-color: #d1230c;
+  background-color: #0ccbd1;
   color: white;
   display: block;
   flex: 1;

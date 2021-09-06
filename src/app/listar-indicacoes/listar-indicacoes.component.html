@@ -1,16 +1,26 @@
 <table class="tabela">
   <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">ID</th>
     <th class="tabela__cabecalho__conteudo">NOME</th>
     <th class="tabela__cabecalho__conteudo">CPF</th>
     <th class="tabela__cabecalho__conteudo">TELEFONE</th>
     <th class="tabela__cabecalho__conteudo">E-MAIL</th>
+    <th class="tabela__cabecalho__conteudo"></th>
+    <th class="tabela__cabecalho__conteudo"></th>
   </thead>
   <tbody>
     <tr class="tabela__linha" *ngFor="let indicacao of indicacoesData">
+      <td class="tabela__conteudo">{{indicacao?.id}}</td>
       <td class="tabela__conteudo">{{indicacao?.nome}}</td>
       <td class="tabela__conteudo">{{indicacao?.cpf}}</td>
       <td class="tabela__conteudo">{{indicacao?.telefone}}</td>
       <td class="tabela__conteudo">{{indicacao?.email}}</td>
+      <td>
+        <app-excluir-indicacao (click)="excluir(indicacao.id)"></app-excluir-indicacao>
+      </td>
+      <td>
+        <app-botao-status (click)="alterarStatus(indicacao.id)"></app-botao-status>
+      </td>
     </tr>
   </tbody>
 

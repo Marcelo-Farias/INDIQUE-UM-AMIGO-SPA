@@ -1,9 +1,9 @@
 header {
-  background-color: var(--primary);
+  background-color: var(--terciary);
   padding: 10px;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
   a {
     color: inherit;
@@ -13,6 +13,16 @@ header {
   .ativo {
     display: none;
   }
+}
+
+.TtlLaranja {
+  font-family: uni_sansheavy_caps;
+  text-align: center;
+  margin: 25px 0 50px;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 600;
+  color: #ef7d00;
 }
 
 main {

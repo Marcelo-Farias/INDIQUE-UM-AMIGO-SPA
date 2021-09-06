@@ -1,6 +1,6 @@
 import { NovaIndicacao } from './../models/send/novaindicacao.model';
 import { IndicacaoService } from './../services/indicacao.service';
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector:'app-incluir-indicacao',
@@ -27,8 +27,13 @@ export class IncluirIndicacaoComponent{
         console.log(resultado);
         this.limparCampos();
       },
-      (error) => console.error(error)
+      (error) => {
+        console.error(error);
+        console.log(error['error']['error']);
+      }
     );
+
+
   }
 
   limparCampos(){

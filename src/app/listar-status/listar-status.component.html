@@ -1,0 +1,21 @@
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">ID</th>
+    <th class="tabela__cabecalho__conteudo">DESCRIÇÃO</th>
+    <th class="tabela__cabecalho__conteudo"></th>
+    <th class="tabela__cabecalho__conteudo"></th>
+  </thead>
+  <tbody>
+    <tr class="tabela__linha" *ngFor="let status of statusIndicacoesData">
+      <td class="tabela__conteudo">{{status?.id}}</td>
+      <td class="tabela__conteudo">{{status?.descricao}}</td>
+      <td>
+        <app-excluir-indicacao (click)="excluir(status.id)"></app-excluir-indicacao>
+      </td>
+      <td>
+        <app-botao-status (click)="alterarStatus(status.id)"></app-botao-status>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
