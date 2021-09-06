@@ -1,27 +1,45 @@
-# IndiqueUmAmigoFrontEnd
+# INDIQUE-UM-AMIGO-Marcelo-Farias
+ Projeto solicitado no processo de seleção para programador back-end da UNISUAM em 2021.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+## Detalhes do projeto:
+O SGBD utilizado foi o PostgreSQL. A implementação da API RESTful foi feita com o Lumen(Laravel). E o front-end foi feito em um projeto separado usando o framework Angular.
 
-## Development server
+## Instruções:
+Criar um banco de dados (PostgreSQL) chamado INDIQUE-UM-AMIGO. Usando as seguintes informações:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ 	Host: localhost
+ 	Port: 5432
+ 	Database_name: INDIQUE-UM-AMIGO
+ 	User: postgres
+ 	Password: UNISUAM2021
 
-## Code scaffolding
+O projeto requer a instalação do:
+ 	PostgreSQL
+ 	Composer
+ 	NodeJS
+	 Angular/CLI
+ 
+Após instalar o NodeJS, podemos instalar o Angular/CLI com o seguinte comando no terminal:
+ 
+	 npm install -g @angular/cli
+ 
+## Fazendo o download das dependências dos projetos:
+Após as instalações. Executar os comandos no terminal:
+	
+ 	Para a API Rest (Laravel/Lumen), no diretório do projeto:
+		1) composer install
+		2) php artisan migrate:install
+		2) php -S localhost:8000 -t public
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+	Para a SPA (Angular), no diretório do projeto:
+		1) npm install
+		2) ng serve
+  
+OBS: A porta para a API deve ser 8000. E a porta para a SPA deve ser 4200.
 
-## Build
+## Link:
+O link para a página do projeto é:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+http://localhost:4200
+ 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
